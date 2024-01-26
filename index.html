@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Diskominfo News</title>
+    <link rel="icon" type="image/x-icon" href="asset/Logo.png">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        .header-offline{
+            border-left-style: solid;
+            border-color: #FD9C41;
+            border-width: 10px;
+            font-weight: bold;
+        }
+        .header-online{
+            border-left-style: solid;
+            border-color: #FD9C41;
+            border-width: 10px;
+            font-weight: bold;
+        }
+        .header-news{
+            border-left-style: solid;
+            border-color: #FD9C41;
+            border-width: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .card {
+            border-radius: 20px;
+        }
+        .navbar {
+            background-color: #FD9C41 ;
+        }
+
+        .navbar-brand img {
+            width: 250px;
+            height: 50px;
+        }
+
+        #navbar {
+            background-color: #FD9C41;
+        }
+
+        .nav-link {
+            color: white;
+            margin-right: 20px;
+        }
+
+        #button-kategori {
+            background-color: #FD9C41;
+            color: white;
+        }
+
+        #btn-keyword {
+            background-color: #FD9C41;
+            color: white;
+        }
+
+        #score-analis {
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light w-100 fixed-top">
+        <div class="container-fluid" id="navbar">
+            <a class="navbar-brand ms-3" href="#"><img src="asset/logo-white.png" alt=""></a>
+            <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav pt-1 me-3 ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" aria-current="page" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" aria-current="page" href="#option-menu">Kategori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" aria-current="page" href="#header-offline">Offline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" aria-current="page" href="#header-online">Online</a>
+                    </li>
+                </ul>
+                <a href="login.php">
+                    <button class="btn text-white nav-login fw-bold me-4">LOGIN</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    <header class="hero-section">
+        <div class="container d-flex justify-content-between align-items-center text-white">
+            <div class="text-section col-6">
+                <h1 class="fw-bolder">Lorem, ipsum. </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptate voluptatum nulla magnam praesentium expedita, possimus atque? Nostrum, explicabo facere?</p>
+            </div>
+            <img class="w-25 col-6" src="asset/Logo.png" alt="">
+        </div>
+        <div class="d-flex justify-content-center align-items-center position-relative">
+            <div class="input-group pt-5 w-50">
+                <input type="search" class="form-control rounded me-4" placeholder="Masukkan Kata Kunci" aria-label="Search" aria-describedby="search-addon" />
+                <button type="button" class="btn btn-success ps-4 pe-4 rounded-2" data-mdb-ripple-init>Cari</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="option-menu ps-5 pe-5 mt-4 container-fluid">
+        <h4 class="header-offline  p-2 mb-3 w-100 bg-body-secondary">Kategori</h4>
+        <div class="row justify-content-center align-items-center">
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+            <button type="button" id="button-kategori" class="btn col-lg-3 m-2">Pendidikan</button>
+        </div>
+    </div>
+
+    <!--content-->
+    <section class="container-fluid">
+        <div class="content-news row ps-5 pe-5">
+            <div class="content-left col-sm-12 col-lg-8 pt-3">
+                <h4 class="header-offline p-2 mb-3 w-100 bg-body-secondary">Offline</h4>
+                <!--Offline Content-->
+                <div class="card mb-3 ">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5 justify-content-center align-items-center ">
+                            <img src="https://png.pngtree.com/background/20230525/original/pngtree-bright-sunset-in-an-lake-area-near-the-colorful-trees-picture-image_2734065.jpg" style="width: 100%; height: 245px;" class="rounded-start-2" alt="...">
+                        </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <button type="button" id="btn-keyword" class="btn mb-3">Genre</button>
+                            <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text" style="font-size: 15px; margin-top: -10px;"><small class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum provident quos mollitia excepturi distinctio harum ipsam quod</small></p>
+                            <div class="row justify-content-between">
+                                <p class="card-text col" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago || Solo Pos</small></p>
+                                <p id="score-analis" class="col-2 text-white rounded-5 text-center">5</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 ">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5 justify-content-center align-items-center ">
+                            <img src="https://png.pngtree.com/background/20230525/original/pngtree-bright-sunset-in-an-lake-area-near-the-colorful-trees-picture-image_2734065.jpg" style="width: 100%; height: 245px;" class="rounded-start-2" alt="...">
+                        </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <button type="button" id="btn-keyword" class="btn mb-3">Genre</button>
+                            <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text" style="font-size: 15px; margin-top: -10px;"><small class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum provident quos mollitia excepturi distinctio harum ipsam quod</small></p>
+                            <div class="row justify-content-between">
+                                <p class="card-text col" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago || Solo Pos</small></p>
+                                <p id="score-analis" class="col-2 text-white rounded-5 text-center">5</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 ">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5 justify-content-center align-items-center ">
+                            <img src="https://png.pngtree.com/background/20230525/original/pngtree-bright-sunset-in-an-lake-area-near-the-colorful-trees-picture-image_2734065.jpg" style="width: 100%; height: 245px;" class="rounded-start-2" alt="...">
+                        </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <button type="button" id="btn-keyword" class="btn mb-3">Genre</button>
+                            <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text" style="font-size: 15px; margin-top: -10px;"><small class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum provident quos mollitia excepturi distinctio harum ipsam quod</small></p>
+                            <div class="row justify-content-between">
+                                <p class="card-text col" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago || Solo Pos</small></p>
+                                <p id="score-analis" class="col-2 text-white rounded-5 text-center">5</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Online Content-->
+                <div class="content-online">
+                    <h4 class="header-online p-2 mb-3 w-100 bg-body-secondary">Online</h4>
+                    <div class="card mb-3">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-5 justify-content-center align-items-center">
+                                <img src="https://png.pngtree.com/background/20230525/original/pngtree-bright-sunset-in-an-lake-area-near-the-colorful-trees-picture-image_2734065.jpg" style="width: 100%; height: 245px;" class="rounded-start-2" alt="...">
+                            </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <button type="button" id="btn-keyword" class="btn mb-3">Genre</button>
+                                <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text" style="font-size: 15px; margin-top: -10px;"><small class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum provident quos mollitia excepturi distinctio harum ipsam quod</small></p>
+                                <div class="row justify-content-between">
+                                    <p class="card-text col" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago || Solo Pos</small></p>
+                                    <p id="score-analis" class="col-2 text-white rounded-5 text-center">5</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 ">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-5 justify-content-center align-items-center ">
+                                <img src="https://png.pngtree.com/background/20230525/original/pngtree-bright-sunset-in-an-lake-area-near-the-colorful-trees-picture-image_2734065.jpg" style="width: 100%; height: 245px;" class="rounded-start-2" alt="...">
+                            </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <button type="button" id="btn-keyword" class="btn mb-3">Genre</button>
+                                <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text" style="font-size: 15px; margin-top: -10px;"><small class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum provident quos mollitia excepturi distinctio harum ipsam quod</small></p>
+                                <div class="row justify-content-between">
+                                    <p class="card-text col" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago || Solo Pos</small></p>
+                                    <p id="score-analis" class="col-2 text-white rounded-5 text-center">5</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 ">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-5 justify-content-center align-items-center ">
+                                <img src="https://png.pngtree.com/background/20230525/original/pngtree-bright-sunset-in-an-lake-area-near-the-colorful-trees-picture-image_2734065.jpg" style="width: 100%; height: 245px;" class="rounded-start-2" alt="...">
+                            </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <button type="button" id="btn-keyword" class="btn mb-3">Genre</button>
+                                <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text" style="font-size: 15px; margin-top: -10px;"><small class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum provident quos mollitia excepturi distinctio harum ipsam quod</small></p>
+                                <div class="row justify-content-between">
+                                    <p class="card-text col" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago || Solo Pos</small></p>
+                                    <p id="score-analis" class="col-2 text-white rounded-5 text-center">5</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Content right-->
+            <div class="content-right col-sm-12 col-lg-4 pt-3">
+                <h4 class="header-news p-2 mb-3 w-100 bg-body-secondary">Berita Terbaru</h4>
+                <div class="card mb-3">
+                    <img src="https://pinhome-blog-assets-public.s3.amazonaws.com/2021/12/Sejarah-Berdiri-Situs-Berita-Detikcom.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Lorem ipsum dolor sit amet.</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="d-flex ">
+                    <div class="card mb-3 me-2 col">
+                        <img src="https://pinhome-blog-assets-public.s3.amazonaws.com/2021/12/Sejarah-Berdiri-Situs-Berita-Detikcom.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-size: 12px; font-weight: bolder;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, facilis et.</h6>
+                            <p class="card-text" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card mb-3 ms-1 col">
+                        <img src="https://pinhome-blog-assets-public.s3.amazonaws.com/2021/12/Sejarah-Berdiri-Situs-Berita-Detikcom.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-size: 12px; font-weight: bolder;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, placeat?</h6>
+                            <p class="card-text" style="font-size: 10px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="header-news p-2 mb-3 w-100 bg-body-secondary">Kategori</h4>
+                <div class="row container justify-content-center">
+                    <div class="form-check col">
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-check col">
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked
+                            </label>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button type="button" class="btn btn-success p-2 ps-3 pe-3">Cari</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <h4 class="bg-body-secondary header-news border-start-2 p-2">Hubungi Kami</h4>
+                    <div class="bg-light rounded-3 p-3 ">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Kirim Email</h4>
+                        <p>Hubungi kami jika ada pertanyaan
+                            kami melayani 24 Jam</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Your email">
+                            <button type="button"
+                                class="btn btn-success py-2 position-absolute top-0 end-0 mt-2 me-2">Kirim</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <div class="footer w-100">
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+            <div class="text-center p-3" style="background-color: #FD9C41">
+                © Copyright Dinas Komunikasi, Informatika dan Statistik 2024 develop by magang UNS. All Rights Reserved
+            </div>
+        </footer>
+    </div>
+
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+    ></script>
+</body>
+</html>
